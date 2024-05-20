@@ -1,0 +1,263 @@
+:root {
+  --bg-color: #222327;
+  --text-color: #fff;
+  --main-color: #29fd53;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: nunito, serif;
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  padding: 28px 12%;
+  transition: all .5s ease;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo i {
+  color: var(--main-color);
+  font-size: 20px;
+  margin-right: 7px;
+}
+
+.logo span {
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.links {
+  display: flex;
+}
+
+.links a {
+  color: var(--text-color);
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px 0;
+  margin: 0 30px;
+  transition: all .5s ease;
+}
+
+.links a:hover {
+  color: var(--main-color);
+}
+
+.links a.active {
+  color: var(--main-color);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right a {
+  margin-right: 25px;
+  margin-left: 10px;
+  color: var(--text-color);
+  font-size: 15px;
+  font-weight: bold;
+  transition: all .5s ease;
+}
+
+.nav-right .user {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right .user i {
+  color: var(--main-color);
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.nav-right a:hover {
+  color: var(--main-color);
+}
+
+#menu-icon {
+  font-size: 20px;
+  color: var(--text-color);
+  cursor: pointer;
+  display: none;
+  z-index: 100001;
+  transition: all .5s ease;
+}
+
+@media(min-width: 992px) and (max-width: 1200px) {
+  nav {
+    padding: 14px 2%;
+    transition: all .2s ease;
+  }
+
+  .links a {
+    padding: 5px 0;
+    margin: 0 20px;
+  }
+}
+
+@media(min-width: 768px) and (max-width:992px) {
+  #menu-icon {
+    display: block;
+  }
+
+  .links {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 270px;
+    height: auto;
+    background: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    border-radius: 10px;
+    transition: all .5s ease;
+  }
+
+  .links a {
+    display: block;
+    margin: 12px 0;
+    padding: 0 25px;
+    transition: all .5s ease;
+  }
+
+  .links a:hover {
+    color: var(--text-color);
+    transform: translateY(5px)
+  }
+
+  .links a.active {
+    color: var(--text-color);
+  }
+
+  .links.open {
+    right: 2%;
+  }
+}
+
+@media(min-width: 576px) and (max-width: 768px) {
+  #menu-icon {
+    display: block;
+  }
+
+  .links {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 270px;
+    height: auto;
+    background: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    border-radius: 10px;
+    transition: all .5s ease;
+  }
+
+  .links a {
+    display: block;
+    margin: 12px 0;
+    padding: 0 25px;
+    transition: all .5s ease;
+  }
+
+  .links a:hover {
+    color: var(--text-color);
+    transform: translateY(5px)
+  }
+
+  .links a.active {
+    color: var(--text-color);
+  }
+
+  .links.open {
+    right: 2%;
+  }
+}
+
+@media(max-width: 576px) {
+  #menu-icon {
+    display: block;
+  }
+
+  .links {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 270px;
+    height: auto;
+    background: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    border-radius: 10px;
+    transition: all .5s ease;
+  }
+
+  .links a {
+    display: block;
+    margin: 12px 0;
+    padding: 0 25px;
+    transition: all .5s ease;
+  }
+
+  .links a:hover {
+    color: var(--text-color);
+    transform: translateY(5px)
+  }
+
+  .links a.active {
+    color: var(--text-color);
+  }
+
+  .links.open {
+    right: 2%;
+  }
+
+  .logo {
+    font-size: 15px;
+  }
+
+  .logo span {
+    font-size: 15px;
+  }
+
+  .nav-right a {
+    font-size: 15px;
+  }
+
+  .nav-right i {
+    font-size: 15px;
+  }
+
+  nav {
+    margin: 0;
+    padding: 20px;
+  }
+}
